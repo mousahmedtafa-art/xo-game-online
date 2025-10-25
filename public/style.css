@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    min-height: 100vh; /* لتوسيط المحتوى في الشاشة بالكامل */
+}
+
+h1 {
+    color: #333;
+}
+
+#status {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#symbol-info {
+    font-size: 1.2rem;
+    color: #28a745; /* لون أخضر لمعلومات الرمز */
+    margin-bottom: 20px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-top: 20px;
+    border: 3px solid #666; /* حدود للوحة */
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid #ccc; /* حدود أرق بين الخلايا */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem; /* حجم أكبر للرمز */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+/* ألوان X و O الجديدة */
+.cell.x {
+    color: #dc3545; /* أحمر */
+}
+
+.cell.o {
+    color: #007bff; /* أزرق */
+}
+
+/* تصميم المربعات الفائزة */
+.cell.winner-x {
+    background-color: #f8d7da; /* خلفية حمراء فاتحة */
+    border-color: #dc3545;
+}
+
+.cell.winner-o {
+    background-color: #d1ecf1; /* خلفية زرقاء فاتحة */
+    border-color: #007bff;
+}
